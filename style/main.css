@@ -1,0 +1,439 @@
+@charset "UTF-8";
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+div:target {
+  padding-top: 5.5em;
+  margin-top: -5.5em;
+}
+
+nav {
+  background: #155867;
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 7px #155867;
+          box-shadow: 0px 0px 7px #155867;
+  height: 70px;
+  margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70px;
+}
+
+img.logo {
+  height: auto;
+  width: 130px;
+}
+
+.liste {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.liste a:nth-child(1) {
+  text-align: right;
+  width: 200px;
+}
+
+.liste a:nth-child(2) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 65px 100px 0px 100px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  z-index: 100;
+}
+
+.liste a:nth-child(2):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.liste a:nth-child(3) {
+  text-align: left;
+  width: 200px;
+}
+
+#lp-n-links {
+  list-style-type: none;
+  padding: 65px 0 0 0;
+  width: 100%;
+  display: none;
+  position: absolute;
+  margin: 205px 0 0 0;
+  text-align: center;
+  background-color: #155867;
+}
+
+#lp-n-links :nth-child(2):hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#lp-n-links :nth-child(1):hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#lp-n-links a {
+  overflow-x: hidden;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+#lp-n-links a.actif {
+  border-bottom: 4px solid #e74c3c;
+}
+
+a {
+  color: white;
+}
+
+.liste a:hover {
+  color: #5dcfe7;
+}
+
+#presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.presentation {
+  margin-top: 70px;
+}
+
+.presentation-title,
+.group-title {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-top: 70px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+hr {
+  background-color: black;
+  border: none;
+  height: 2px;
+  width: 40%;
+}
+
+.container-top {
+  margin-top: 0px;
+  /* The image used */
+  background-image: url("../img/banner-group.jpg");
+  /* Set a specific height */
+  height: calc(90vh - 70px);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-bottom h2 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.container-bottom p {
+  padding: 0 17%;
+  text-align: justify;
+  text-indent: 5%;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:before {
+  content: "▻ ";
+}
+
+#group-members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  text-align: center;
+  width: 100%;
+}
+
+.person-card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px rgba(10, 61, 98, 0.2);
+          box-shadow: 0px 0px 15px rgba(10, 61, 98, 0.2);
+  margin: 15px;
+  text-align: center;
+  width: 350px;
+  position: relative;
+}
+
+.overlay {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5dcfe7+0,49a6c0+50,336683+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5dcfe7+0,49a6c0+26,336683+100 */
+  background: #5dcfe7;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #5dcfe7 0%, #49a6c0 26%, #336683 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5dcfe7', endColorstr='#336683', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  /* IE6-9 fallback on horizontal gradient */
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.person-card:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 1.2em;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-15%, -10%);
+  text-align: justify;
+}
+
+.person-photo {
+  width: 90%;
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: 100;
+}
+
+.lastname {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.person-promo {
+  color: rgba(47, 54, 64, 0.7);
+  font-style: italic;
+  font-size: 0.9em;
+  font-weight: 100;
+}
+
+hr.card-separator {
+  background-color: black;
+  border: none;
+  height: 1px;
+  width: 40%;
+}
+
+.skills-title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skills {
+  text-align: justify;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 17px;
+  right: 30px;
+  z-index: 99;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  background-color: #49A6C0;
+  color: white;
+  cursor: pointer;
+  padding: 5px 11px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #155867;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+footer {
+  bottom: O;
+}
+
+#footer-content {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #155867;
+  -webkit-box-shadow: 0px 0px 7px #155867;
+          box-shadow: 0px 0px 7px #155867;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  line-height: 80px;
+  width: 100%;
+}
+
+.footer-text {
+  text-align: center;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
+.social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  margin-right: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.picto {
+  font-size: 25px;
+  margin-right: 15px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.picto:hover {
+  color: #5dcfe7;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+i {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .liste a:nth-child(1) {
+    display: none;
+  }
+  .liste a:nth-child(3) {
+    display: none;
+  }
+  .container-bottom h2 {
+    margin-top: 25px;
+  }
+  .container-bottom p {
+    padding: 0 10%;
+    text-indent: 10%;
+  }
+  #footer-content {
+    display: block;
+    height: 90px;
+    line-height: 40px;
+    width: 100%;
+  }
+  .footer-text {
+    display: block;
+    height: 50%;
+    width: 100%;
+  }
+  .footer-text p {
+    margin: 0;
+  }
+  .social-networks {
+    display: block;
+    height: 50%;
+    width: 100%;
+    margin-right: 10%;
+    text-align: center;
+  }
+  .picto {
+    font-size: 25px;
+    margin-right: 15px;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  .picto:hover {
+    color: #5dcfe7;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  i {
+    font-size: 2em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
